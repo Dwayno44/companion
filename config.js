@@ -8,4 +8,4 @@
 // Until you do, the page runs in a gentle "demo" mode so you can see how it
 // looks and feels — the demo replies are canned, not real.
 
-const WORKER_URL = "PASTE_YOUR_WORKER_URL_HERE";
+const WORKER_URL = "https://companion.coolscompanion.workers.dev";
