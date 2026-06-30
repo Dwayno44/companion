@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+  />
+  <meta name="theme-color" content="#f4f1ea" />
+
+  <!-- Lets her "Add to Home Screen" on iPad/iPhone and open it like an app -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="A quiet place" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <title>A quiet place to talk</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- First-run welcome (shown only until she sends her first message) -->
+    <section id="welcome" class="welcome" hidden>
+      <div class="welcome-card">
+        <h1>Hello.</h1>
+        <p>
+          This is a quiet, private space — just for you. There's no one waiting,
+          no one to bother, nothing you need to get right. You can say whatever
+          is sitting on your mind, at any hour, and something here will listen.
+        </p>
+        <p>
+          It isn't a doctor or a counsellor, and it won't pretend to be. But it
+          has time for you, always. Made with love, by someone who cares about you.
+        </p>
+        <button id="beginBtn" class="begin-btn" type="button">I'm ready</button>
+      </div>
+    </section>
+
+    <!-- Chat -->
+    <section id="chat" class="chat" hidden>
+      <header class="topbar">
+        <span class="topbar-title">A quiet place to talk</span>
+        <button id="newChatBtn" class="ghost-btn" type="button" title="Start a fresh conversation">Start fresh</button>
+      </header>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <form id="composer" class="composer">
+        <label class="visually-hidden" for="input">Type your message</label>
+        <textarea
+          id="input"
+          class="input"
+          rows="1"
+          placeholder="Type here, whenever you're ready…"
+          autocomplete="off"
+        ></textarea>
+        <button id="sendBtn" class="send-btn" type="submit" aria-label="Send">
+          <span aria-hidden="true">↑</span>
+        </button>
+      </form>
+
+      <footer class="safety">
+        This isn't a substitute for a doctor or counsellor. If things ever feel
+        unbearable, please reach out to a real person —
+        <strong>Lifeline 13&nbsp;11&nbsp;14</strong> (24 hours), or call
+        <strong>000</strong> in an emergency.
+      </footer>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

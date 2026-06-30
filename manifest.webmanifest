@@ -1,0 +1,17 @@
+{
+  "name": "A quiet place to talk",
+  "short_name": "A quiet place",
+  "description": "A warm, private space to talk, any time.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f1ea",
+  "theme_color": "#f4f1ea",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

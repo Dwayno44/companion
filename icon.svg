@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="A quiet place to talk">
+  <rect width="180" height="180" rx="40" fill="#7c8a72"/>
+  <!-- soft speech bubble -->
+  <path d="M52 50h76a18 18 0 0 1 18 18v42a18 18 0 0 1-18 18H86l-22 20v-20h-12a18 18 0 0 1-18-18V68a18 18 0 0 1 18-18z" fill="#fbfaf6"/>
+  <!-- gentle heart inside -->
+  <path d="M90 110c-14-9-22-17-22-27a12 12 0 0 1 22-7 12 12 0 0 1 22 7c0 10-8 18-22 27z" fill="#7c8a72"/>
+</svg>

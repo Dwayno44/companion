@@ -1,0 +1,16 @@
+# IMPORTANT — privacy:
+# Yvonne's personal story lives in worker/worker.js. This repo is PUBLIC
+# (GitHub Pages requires it), so the Worker is deliberately kept OUT of it.
+# The Worker is deployed straight to Cloudflare from your local copy and never
+# touches GitHub. Keep your local copy of worker/ safe — it is the only place
+# that file lives, besides Cloudflare.
+worker/
+
+# Node / Wrangler
+node_modules/
+.wrangler/
+.dev.vars
+
+# OS clutter
+.DS_Store
+Thumbs.db
