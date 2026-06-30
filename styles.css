@@ -37,10 +37,12 @@ html, body {
 }
 
 body {
-  /* dvh tracks the *visible* area as iOS browser chrome / keyboard appear,
-     so the composer never hides behind them. vh is the fallback. */
+  /* Track the *visible* area so the composer never hides behind iOS browser
+     chrome or the keyboard. --app-height (set from JS) is the most reliable;
+     dvh and vh are fallbacks for browsers without the script. */
   height: 100vh;
   height: 100dvh;
+  height: var(--app-height, 100dvh);
   overflow: hidden;            /* only the message list scrolls */
   overscroll-behavior: none;   /* no whole-page rubber-banding */
 }

@@ -21,6 +21,18 @@
   // Conversation state: [{ role: "user" | "assistant", content: "..." }]
   let history = loadHistory();
 
+  // Keep the app exactly as tall as the *visible* viewport, so the composer
+  // never hides behind the iOS keyboard or Safari's chrome. More reliable than
+  // CSS dvh alone, and it tracks the keyboard opening/closing on iPad.
+  function setAppHeight() {
+    document.documentElement.style.setProperty("--app-height", window.innerHeight + "px");
+  }
+  setAppHeight();
+  window.addEventListener("resize", setAppHeight);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", setAppHeight);
+  }
+
   // ── Boot ──────────────────────────────────────────────────────────────
   const hasWelcomed = localStorage.getItem(WELCOME_SEEN_KEY) === "yes";
   if (hasWelcomed || history.length > 0) {
